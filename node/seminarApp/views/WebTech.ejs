@@ -1,0 +1,103 @@
+    <%- include("includes/head.ejs") %>
+    <title>WebTech - Details</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/flexbox.css" />
+  </head>
+  <body>
+    <%- include("includes/header.ejs") %>
+    <%- include("includes/nav.ejs") %>
+    <div id="maincontainer">
+      <main id="flexmain">
+        <article class="inhaltsblockDetail" title="Informationen zum Seminar">
+          <h2>Informationen zu Web-Technologien</h2>
+          <table id="alleseminare">
+            <thead>
+              <tr>
+                <th>Titel</th>
+                <th>Seminarleiter</th>
+                <th>Zeitpunkt</th>
+                <th>Start</th>
+                <th>Ende</th>
+                <th>freie Plätze</th>
+                <th>Anzahl Plätze</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Web-Technologien</td>
+                <td><a href="joerges.html">Prof. Dr. Sven Jörges</a></td>
+                <td>08.05.2020</td>
+                <td>10:00</td>
+                <td>14:30</td>
+                <td>9</td>
+                <td>32</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+        <hr />
+        <article class="inhaltsblockDetail" title="Beschreibung des Seminars">
+          <h2>Beschreibung des Seminars</h2>
+          <p>
+            Studierende erhalten in diesem Modul einen Überblick über die
+            wichtigsten Technologien, die heute für die Erstellung von
+            Web-Anwendungen eingesetzt werden. Sie beherrschen nach Abschluss
+            der Vorlesung die zentralen Prinzipien und Konzepte, die modernen
+            Web-Architekturen zugrunde liegen.
+          </p>
+          <strong><u>Fach- und Methodenkompetenz:</u></strong>
+          <ul>
+            <li>
+              Absolventinnen und Absolventen des Moduls können die zentralen
+              Grundprinzipien des WWW benennen und im Kontext von
+              Web-Anwendungen einordnen.
+            </li>
+            <li>
+              Sie erlangen die Fachkompetenz, client- und serverseitige
+              Techniken der Web-Entwicklung zu differenzieren. Zudem können sie
+              wichtige client- und serverseitige Technologien für die Erstellung
+              von Web-Anwendungen benennen und anwenden.
+            </li>
+            <li>
+              Studierende erkennen grundlegende Architekturmuster von
+              Web-Anwendungen und können diese modellieren. Sie können die
+              inhärenten technologieunabhängigen Strukturmerkmale von
+              Web-Anwendungen benennen und auf konkrete Technologien übertragen.
+            </li>
+          </ul>
+          <strong><u>Fachübergreifende Methodenkompetenz:</u></strong>
+          <ul>
+            <li>
+              Die Teilnehmerinnen und Teilnehmer beherrschen die Analyse einer
+              umfangreichen Anforderung und können diese in Teilanforderungen
+              zerlegen. Sie haben Erfahrungen, Teilanforderungen über mehrere
+              Wochen im Rahmen eines Gesamtprojektes im Team umzusetzen.
+            </li>
+            <li>
+              Studierende können Architekturen von Softwaresystemen beschreiben
+              und einordnen.
+            </li>
+          </ul>
+          <strong><u>Sozialkompetenz:</u></strong>
+          <ul>
+            <li>
+              Die Teilnehmerinnen und Teilnehmer erarbeiten und realisieren
+              Lösungen kooperativ im Team.
+            </li>
+            <li>
+              Sie sind darüber hinaus in der Lage, ihre Ideen und Lösungen zu
+              erläutern und zu diskutieren.
+            </li>
+            <li>
+              Hier könnten weitere Weisheiten stehen!
+            </li>            
+          </ul>
+          <br>
+        </article>
+      </main>
+      <%- include("includes/aside.ejs") %>
+    </div>
+    <%- include("includes/footer.ejs") %>
+  </body>
+</html>

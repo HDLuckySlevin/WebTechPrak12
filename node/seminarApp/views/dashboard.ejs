@@ -1,0 +1,31 @@
+    <%- include("includes/head.ejs") %>
+    <title>WebTech - Dashboard</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
+  </head>
+  <body>
+    <%- include("includes/header.ejs") %>
+    <main>
+      <div style="justify-content: center;">
+        <div id="maincontainer">
+          <a href="seminarliste"
+            ><div class="flexboxdash">Seminarliste</div></a
+          >
+          <a href="seminardetail"
+            ><div class="flexboxdash">Seminardetails</div></a
+          >
+          <a href="seminarleiter"
+            ><div class="flexboxdash">Seminarleiter</div></a
+          >
+          <a href="seminarneu"
+            ><div class="flexboxdash">Neues Seminar anlegen</div></a
+          >
+          <a href=""><div class="flexboxdash" id="flexbox5">+</div></a>
+        </div>
+      </div>
+    </main>
+    <%- include("includes/footer.ejs") %>
+    <script src="/js/dashboard.js"></script>
+  </body>
+</html>

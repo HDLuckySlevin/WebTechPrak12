@@ -1,0 +1,33 @@
+/*Responsive Prak8*/
+@media screen and (max-width:480px){
+    #gridmain {
+        display: grid;
+        grid-template-areas: "griddozinfo" 
+                             "griddozpic";
+        /*
+        damit kann die spaltengröße definiert werden
+        grid-template-columns: auto 250px;
+        */
+    }
+
+    main {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:768px){
+    #gridcontainer {
+        grid-template-areas: "gridhead gridhead"
+                             "gridnav gridnav"
+                             "gridmain gridmain"
+                             "gridaside gridaside"
+                             "gridfooter gridfooter";
+        grid-template-columns: auto auto;
+    }
+
+    #dozbild img{
+        max-width: 100%;
+        height: auto;
+    }
+}
+

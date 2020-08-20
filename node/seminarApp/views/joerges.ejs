@@ -1,0 +1,79 @@
+    <%- include("includes/head.ejs") %>
+    <title>Infoseite zu Prof. Dr. Jörges</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/grid.css" />
+    <link rel="stylesheet" type="text/css" href="css/mobileDozent.css">
+  </head>
+  <body>
+    <div id="gridcontainer">
+      <%- include("includes/header.ejs") %>
+      <%- include("includes/nav.ejs") %>
+      <main id="gridmain">
+        <section id="dozbild">
+          <h2>Bild</h2>
+          <figure id="dozentfigure">
+            <img
+              src="/img/joerges.jpg"
+              alt="Bild von Prof. Dr. Sven Jörges"
+            />
+            <figcaption>
+              Abbildung: Prof. Dr. Sven Jörges
+            </figcaption>
+          </figure>
+        </section>
+        <section id="dozinfo">
+          <h2>Dozenteninfos</h2>
+          <table id="dozentinfos">
+            <tr>
+              <td>Position</td>
+              <td>Professor</td>
+            </tr>
+            <tr>
+              <td>Lehrgebiet</td>
+              <td>Web-Engineering, Softwaretechnik</td>
+            </tr>
+            <tr>
+              <td>Org.-Einheit</td>
+              <td>FB Informatik</td>
+            </tr>
+            <tr>
+              <td>Adresse</td>
+              <td>Emil-Figge-Str. 42<br />44227 Dortmund</td>
+            </tr>
+            <tr>
+              <td>Raum</td>
+              <td>EFS 42 C.2.47</td>
+            </tr>
+            <tr>
+              <td>Briefkasten</td>
+              <td>88</td>
+            </tr>
+            <tr>
+              <td>Sprechzeiten</td>
+              <td>Nach Vereinbarung (per E-Mail).</td>
+            </tr>
+            <tr>
+              <td>Tel.</td>
+              <td>+49 (0231) 9112-6741</td>
+            </tr>
+            <tr>
+              <td>Fax</td>
+              <td>+49 (0231) 9112-6710</td>
+            </tr>
+            <tr>
+              <td>E-Mail</td>
+              <td>
+                <a href="mailto:sven.joerges@fh-dortmund.de"
+                  >sven.joerges@fh-dortmund.de</a
+                >
+              </td>
+            </tr>
+          </table>
+        </section>
+      </main>
+      <%- include("includes/aside.ejs") %>
+      <%- include("includes/footer.ejs") %>
+    </div>
+  </body>
+</html>

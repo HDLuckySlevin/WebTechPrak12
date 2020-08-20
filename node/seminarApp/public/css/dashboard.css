@@ -1,0 +1,53 @@
+
+
+#maincontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#maincontainer div {
+    background-color: #ff6600;
+    border: 1px solid black;
+    flex-basis: 350px;
+    width: 350px;
+    height: 350px;
+    margin-top: 15px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+#maincontainer a{
+    text-decoration: none;
+    font-size: larger;
+    color: aliceblue;
+}
+#maincontainer a:visited {
+    text-decoration: none;
+  }
+
+#flexbox5{
+    font-size: 2em;
+}
+
+
+
+@media screen and (max-width:768px){
+    #maincontainer div { 
+        flex-basis: 220px;
+        width: 220px;
+        height: 220px;        
+    }  
+}
+
+
+@media screen and (max-width:480px){
+
+    #maincontainer div { 
+        flex-basis: 150px;
+        width: 150px;
+        height: 150px;                
+    }  
+}

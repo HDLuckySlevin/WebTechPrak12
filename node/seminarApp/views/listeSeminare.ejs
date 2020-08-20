@@ -1,0 +1,62 @@
+    <%- include("includes/head.ejs") %>
+    <title>Seminare - Liste</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/flexbox.css" />
+  </head>
+  <body>
+    <%- include("includes/header.ejs") %>
+    <%- include("includes/nav.ejs") %>
+    <div id="maincontainer">
+      <main id="flexmain">
+        <section title="Suchformular">
+          <h2>Sucheformular</h2>
+          <form
+            id="semsuche"
+            action="http://localhost:8020"
+            method="GET"
+          >
+            <fieldset>
+              <legend>Seminarsuche</legend>
+              <label class="requiredlabel">
+                <input
+                  type="text"
+                  name="semtitle"
+                  size="20"
+                  placeholder="Seminartitel eingeben"
+                  maxlength="20"
+                  required
+              /></label>
+
+              <input type="submit" value="Finden" />
+            </fieldset>
+          </form>
+        </section>
+        <section title="Liste der Seminare">
+          <h2>Liste der Seminare</h2>
+          <table id="alleseminare">
+            <thead>
+              <tr>
+                <th>Titel</th>
+                <th>Datum</th>
+                <th>Ort</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for (let seminar of seminare){ %>
+                <tr>
+                  <td><a href="seminardetail"><%= seminar.titel %></a></td>
+                  <td><%= seminar.startzeit.toLocaleDateString() %></td>
+                  <td><%= seminar.ort %></td>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </section>
+      </main>
+      <%- include("includes/aside.ejs") %> 
+    </div>
+    <%- include("includes/footer.ejs") %>
+     <script src="/js/first.js"></script>
+  </body>
+</html>

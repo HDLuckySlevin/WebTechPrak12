@@ -1,0 +1,50 @@
+/* Stylesheet für GRID-Layout Prak7*/
+#gridcontainer {
+    display: grid;
+    grid-template-areas: "gridhead gridhead gridhead"
+                         "gridnav gridnav gridnav"
+                         "gridmain gridmain gridaside"
+                         "gridfooter gridfooter gridfooter";
+    grid-template-columns: auto auto 35%;
+}
+
+header {
+    grid-area: gridhead;
+}
+
+nav {
+    grid-area: gridnav;
+}
+
+main {
+    grid-area: gridmain;
+    /*Center-Ausrichtung im item*/
+    margin: auto;
+}
+
+aside {
+    grid-area: gridaside;
+}
+
+footer {
+    grid-area: gridfooter;
+}
+
+#gridmain {
+    display: grid;
+    grid-template-areas: "griddozinfo griddozpic";
+    /*
+    damit kann die spaltengröße definiert werden
+    grid-template-columns: auto 250px;
+    */
+}
+
+#dozbild {
+    grid-area: griddozpic;
+}
+
+#dozinfo {
+    grid-area: griddozinfo;
+}
+
+

@@ -1,0 +1,11 @@
+/*Responsive Prak8*/
+@media screen and (max-width:768px){
+    #gridcontainer {
+        grid-template-areas: "gridhead gridhead"
+                             "gridnav gridnav"
+                             "gridmain gridmain"
+                             "gridaside gridaside"
+                             "gridfooter gridfooter ";
+        grid-template-columns: auto auto;
+    }
+}

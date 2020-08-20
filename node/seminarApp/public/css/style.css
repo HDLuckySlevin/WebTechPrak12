@@ -1,0 +1,191 @@
+/* Stylesheet für WebTech*/
+/* ALLGEMEIN */
+
+* {
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+h2 {
+    /*FH Dortmund Farbcode*/
+    color: #ff6600;
+    margin-top: 0;
+}
+/* HEADER */
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+header h1{
+    letter-spacing: 0.3em;
+    color: #ff6600;
+    text-shadow: 3px 3px 1px #AA6622;
+}
+header img {
+    float: left;
+    margin: 15px;
+}
+
+/* HEADER ENDE*/
+/* NAVIGATION */
+nav {
+    text-align: center;
+}
+.navigation li{
+    display: inline;
+    padding: 5px;
+}
+
+nav a:hover{
+    background-color: #ff6600;
+    color: white;
+    font-size: large;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+nav a {
+    text-decoration-color: #ff6600;
+}
+
+/* NAVIGATION ENDE */
+
+/* FOOTER */
+footer {
+    display: block;
+    background-color: white;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
+/* FOOTER ENDE */
+
+/* FORMULAR */
+    /* Input-Gestaltung */
+
+input:required:invalid {
+    background-color: rgb(211, 148, 148);
+    color: black;
+    box-shadow: 2px 2px 5px rgba(221, 8, 8, 0.65);
+}
+
+input:required:valid {
+    background-color: lightgreen;
+    color: black;
+    box-shadow: 2px 2px 5px rgba(255, 102, 0, 0.85);
+}
+
+input:required::placeholder {
+    color: black;
+}
+
+input:focus, input:hover {
+    border-color: #ff6600;
+    outline: none;
+}
+
+.requiredlabel::after{
+    color: red;
+    margin: 0px 5px;
+    content: "\" (erforderliche Eingabe)\"";
+}
+
+fieldset {
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+fieldset legend{
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+    color: white;
+    font-size: small;
+    background-color: navy;
+    box-shadow: 2px 2px 5px rgba(255, 102, 0, 0.85);
+}
+
+/* FORMULAR ENDE*/
+
+/* TABELLEN */
+    /* Alle Seminare */
+#alleseminare thead{
+    background-color: #ff6600;
+}
+
+#alleseminare tbody tr:nth-child(odd){
+    background-color: #f5f5f5;
+}
+
+#alleseminare tbody tr:hover{
+    background-color: #ffbd90;
+}
+
+#dozentinfos tr:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+/* TABELLEN ENDE */
+/* LINKS */
+[href^="mailto:"]::before{
+    content: url(../bilder/mail_icon2.png);
+    width: 10px;
+    height: 10px;
+}
+
+/* SONSTIGES*/
+/* AktuelleMeldungen hat eine ID bekommen, damit nicht der ganze "aside" Bereich markiert werden muss! Hätte auch mittels "aside article{}" funktioniert*/
+#aktuelleMeldungen{
+    background-color:lightgray;
+    border-style: dotted;
+    padding: 5px;
+    margin: 0;
+    border-width: 2px;
+    height: 100%;
+}
+
+hr {
+    width: 100%;
+}
+/*aside*/
+aside section h2{
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* Section auf Detail-Seite*/
+.inhaltsblockDetail {
+    border-left: 1px solid black;
+    padding-left: 10px;
+}
+
+#semanlegen {
+    width: 500px;
+}
+
+#dozentfigure {
+    margin-left: 0;
+}
+
+#gridmain section {
+    margin: 5px;
+}
+
+
+
+
+@media screen and (max-width:768px){
+ header h1{
+    font-size: 1.5em;
+    font-weight: bolder;
+ }
+}
+
+@media screen and (max-width:480px){
+    header h1{
+        display:none;
+     }
+}

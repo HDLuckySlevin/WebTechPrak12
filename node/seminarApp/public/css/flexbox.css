@@ -1,0 +1,33 @@
+/*  Flexbox.css 
+    <div> um <main>, damit main und aside als flex-items genutzt werden können
+    main und aside sind flex-items
+*/
+
+#maincontainer {
+    display: flex;
+    flex-direction: row;
+    /*flex-flow: row wrap;*/        
+}
+
+/* mittels Prozent-breite. Sonst lieber mit flex-grow und festen px-werten?*/
+#flexmain {
+    flex: 2 1;
+    display: flex;
+    flex-direction: column; 
+}
+
+/*dies damit beide sectionen in "listeSeminar" centered sind*/
+#flexmain section {
+    margin: auto;
+}
+#flexaside {
+    flex-basis: 35%;
+}
+
+
+/*Responsive Prak8*/
+@media screen and (max-width:768px){
+    #maincontainer {
+       flex-direction: column;      
+    }
+}

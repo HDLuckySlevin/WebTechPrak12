@@ -1,0 +1,152 @@
+    <%- include("includes/head.ejs") %>
+    <title>Seminare - Liste</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/grid.css" />
+    <link rel="stylesheet" type="text/css" href="css/mobileAnlegen.css" media="screen and (max-width:768px)">
+  </head>
+  <body>
+    <div id="gridcontainer">
+      <%- include("includes/header.ejs") %>
+      <%- include("includes/nav.ejs") %>
+      <main>
+        <section title="Formular für Seminar-Anlegung">
+          <h2>Formular für Seminar-Anlegung</h2>
+
+          <form
+            id="semanlegen"
+            action="seminarneu"
+            method="POST"
+          >
+            <fieldset>
+              <legend>Seminar anlegen!</legend>
+              <fieldset>
+                <legend>Allgemein</legend>
+                <!-- Tabelle ist mittels single-row gestalltet, damit die "labels" mit den "input-feldern" zusammen sind. Im weiteren verlauf dann evtl nur noch mittels css formatiert, ohne table-->
+                <table class="tablesemanlegen">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <label class="requiredlabel"
+                          >Titel
+                          <input
+                            name="semtitle"
+                            type="text"
+                            placeholder="Titel vom Seminar"
+                            maxlength="20"
+                            autofocus
+                            required
+                            pattern="[A-Z]{1}.*"
+                        /></label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label
+                          >Seminarleiter
+                          <select name="semlead">
+                            <option value="sjoerges" selected
+                              >Prof. Dr. Jörges</option
+                            >
+                            <option value="harrer">Prof. Dr. Harrer</option>
+                            <option value="gvollmer">Prof. Dr. Vollmer</option>
+                          </select></label
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label 
+                          >Ort
+                          <input
+                            name="semort"
+                            type="text"
+                            placeholder="Ort des Seminars"
+                            maxlength="20"
+                        /></label>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </fieldset>
+              <fieldset>
+                <legend>Zeit</legend>
+                <table class="tablesemanlegen">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <label
+                          >Datum <input name="semdate" type="date"
+                        /></label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label
+                          >Startzeit
+                          <input
+                            name="semstart"
+                            type="time"
+                            min="08:00"
+                            max="16:00"
+                        /></label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label
+                          >Endzeit
+                          <input
+                            name="semend"
+                            type="time"
+                            min="08:30"
+                            max="18:00"
+                        /></label>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </fieldset>
+              <fieldset>
+                <legend>Tutoren und Teilnehmer</legend>
+                <table class="tablesemanlegen">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <label
+                          >Verfügbare Plätze
+                          <input
+                            name="semseats"
+                            type="number"
+                            min="0"
+                            max="100"
+                            placeholder="bsp. 10"
+                        /></label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label
+                          >Tutoren
+                          <input
+                            name="semtutors"
+                            type="text"
+                            pattern="([a-z]{2,4}[1-9]{1})(,[a-z]{2,4}[1-9]{1})*"
+                            placeholder="bsp. anke2,ou5,joe7,tim4"
+                          />
+                        </label>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </fieldset>
+              <input type="submit" value="Anlegen" />
+            </fieldset>
+          </form>
+        </section>
+      </main>
+      <%- include("includes/aside.ejs") %>
+      <%- include("includes/footer.ejs") %>
+    </div>
+  </body>
+</html>
