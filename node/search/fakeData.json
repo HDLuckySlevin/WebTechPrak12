@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "titel": "Aktuelle Themen des Web-Engineering",
+      "leiter": "Joerg Svensson"
+    },
+    { "titel": "Didaktische Reduktion", "leiter": "Katharina Schmidt" },
+    {
+      "titel": "Der Weg durch das Klammergebirge - Lisp für Anfänger",
+      "leiter": "Conrad Barski"
+    },
+    {
+      "titel": "Bitcoin oder doch lieber Zcash?",
+      "leiter": "Satoshi Nakamoto"
+    },
+    { "titel": "Programmieren mit Malbolge", "leiter": "Ben Olmstead" },
+    { "titel": "Stimmtraining: Focus Stimme", "leiter": "Alicia Keys" },
+    { "titel": "Fortgeschrittene Prokrastination", "leiter": "Ferris Bueller" },
+    { "titel": "Web-Entwicklung: Das Gute an JavaScript", "leiter": "Douglas Crockford" },
+    {
+      "titel": "Das 'S' in IoT steht f&uuml;r Sicherheit",
+      "leiter": "Anke Rehder"
+    }
+  ]
+}
